@@ -8,9 +8,9 @@ use App\Models\Cocktail as Cocktail;
 
 class ApiController extends Controller
 {
-    function index()
+    public function index()
     {
-        $cocktails = Cocktail::paginate(7);
+        $cocktails = Cocktail::paginate(9);
         return response()->json($cocktails);
     }
 }
